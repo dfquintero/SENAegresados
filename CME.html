@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="style.css" rel="stylesheet" />
+
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
+    <!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <!--<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+	
+	<link rel="stylesheet" href="jq\jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="jq/jquery-2_1_3.js"></script>
+	<script src="jq/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="highcharts-custom.js"></script>
+
+    <script src="script.js"></script>
+
+    <title>Centro de Materiales y Ensayos</title>
+</head>
+<body style="padding:0px; background-image:url(IMG/bg_pattern.png); background-color:#eeeeee">
+    <div id="page-wrap">
+        <header>
+            <img src="IMG/banner_cme.jpg" width="100%" alt="Centro de Materiales y Ensayos" />
+        </header>
+        <table border="1" width="100%">
+            <tr>
+                <td width="70%">
+                    <!--HIGHCHARTS-->
+                    <div id="container" style="width:100%; height:400px;"></div>
+                </td>
+                <td width="30%">
+                    <!-- start feedwind code -->
+                    <script type="text/javascript">document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');</script>
+                    <script type="text/javascript">(function() {var params = {rssmikle_url: "http://materialesyensayosena.blogspot.com/feeds/posts/default?alt=rss",rssmikle_frame_width: "300",rssmikle_frame_height: "400",frame_height_by_article: "0",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "13",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "justify",corner: "off",scrollbar: "on",autoscroll: "off",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "New",rssmikle_title: "off",rssmikle_title_sentence: "",rssmikle_title_link: "",rssmikle_title_bgcolor: "#0066FF",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#FF6600",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "on",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#000000",rssmikle_item_date: "off",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M:%S %p",item_description_style: "text+tn",item_thumbnail: "full",item_thumbnail_selection: "enclosure",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script>
+                    <div style="font-size:10px; text-align:center; width:300px;"><a href="http://feed.mikle.com/" target="_blank" style="color:#CCCCCC;">RSS Feed Widget</a><!--Please display the above link in your web page according to Terms of Service.--></div>
+                    <!-- end feedwind code -->
+                </td>
+            </tr>
+
+            <tr style="">
+                <td colspan="2">
+                    <div data-role="collapsibleset" data-content-theme="a" data-theme="a">
+                        <div data-role="collapsible">
+                            <h3>Nuevo Ingreso</h3>
+							<form  method="POST" name="frm" action="crear.php">
+                            <input id="" name="_Nombres" type="text" placeholder="Nombres" style="width:80%" /><br />
+							<input id="" name="_Apellidos" type="text" placeholder="Apellidos" style="width:80%" /><br />
+							<select id="" style="width:" name="_Tipo_Documento">
+								<option value="" disabled selected>Tipo de Documento</option>
+								<option value="T.I.">T.I.</option>
+								<option value="C.C.">C.C.</option>
+								<option value="C.E.">C.E.</option>
+							</select>
+							<input id="" type="number" placeholder="No. Documento" name="_No_Documento" style="width:35%" />
+							<input id="" name="_Correo_MiSena" type="email" placeholder="Correo MiSENA" style="width:80%" /><br />
+							<input id="" name="_Correo_Electronico" type="email" placeholder="Correo Adicional" style="width:80%" /><br />
+							<input id="" name="_Celular" type="tel" placeholder="No. Celular" style="width:80%" /><br />
+							<input id="" name="_Fijo" type="tel" placeholder="No. Fijo" style="width:80%" /><br />
+							<input id="" name="_Direccion" type="text" placeholder="Dirección" style="width:80%" /><br />
+							<input id="" name="Barrio" type="text" placeholder="Barrio" style="width:80%" /><br />
+							<input id="" name="Localidad" type="text" placeholder="Localidad" style="width:80%" /><br />
+							<input id="" name="_E_Centro" type="text" placeholder="_" style="width:80%" disabled value="CME - Centro de Materiales y Ensayos" /><br />
+							<select style="width:80%;" name="_Tipo_Titulacion">
+								<option disabled selected>Tipo de Titulación</option>
+								<option value="Técnico">Técnico</option>
+								<option value="Tecnólogo">Tecnólogo</option>
+							</select><br />
+							<input id="" name="_Nombre_Programa" type="text" placeholder="Programa" style="width:80%" /><br />
+							<input id="" name="_Codigo_Programa" type="number" placeholder="Cod. Programa" style="width:80%" /><br />
+							<input id="" name="_Ficha" type="number" placeholder="Ficha" style="width:80%" /><br />
+							<h3>ENCUESTA</h3><br />
+							<label for="">¿Esta Registrado en la Página de la <b>Agencia Pública de Empleo</b>?</label><br />
+								Si<input id="Radio1" type="radio" value="Si" name="_Reg_Pagina" />
+								No<input id="Radio1" type="radio" value="No" name="" /><br />
+							<label for="">¿Actualmente trabaja en lo que estudió?</label><br />
+								Si<input id="Radio1" type="radio" value="Si" name="_T_Estudia" />
+								No<input id="Radio1" type="radio" value="No" name="" /><br />
+							<label for="">Nombre de La Empresa</label><br />
+							<input id="" type="text" style="width:90%" name="_Nom_Empresa" /><br />
+							
+							<label for="Comm">Comentarios:</label><br />
+							<textarea style="width:90%; height:110px; text-wrap:normal" name="Comentarios"></textarea><br />
+							
+							<input id="Submit1" type="submit" value="AGREGAR EGRESADO" style="width:95%; height:50px; background-color:rgba(235, 109, 16, 0.90)" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'" /><br />
+							<input id="ResetForm" type="reset" value="LIMPIAR FORMULARIO" style="width:95%; height:50px; background-color:rgba(235, 109, 16, 0.90)" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'" /><br />
+							</form>
+                        </div>
+                        <div>
+                            
+                        
+                            <div data-role="collapsible">
+                                <h3>Registros</h3>
+                                <div id="registros">
+
+                                </div>
+                                <script type="text/javascript">
+                                    Cregistros("registros");
+                                </script>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <ul data-role="listview" data-inset="true">
+                        <li>
+                            <a href="index.php">
+                                <h2>Stephen Weber</h2>
+                                <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+                                <p>ola k ase?</p>
+                                <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+                                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+                            </a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+    <footer id="footer">
+        <p style="text-align:right; color:white; text-shadow:5px 2px 2px #000000; padding-top:20px; padding-right:10px">Developed By: <a href="http://www.dfquintero.com" style="color:white">dfquintero</a>.  </p>
+    </footer>
+</body>
+</html>
