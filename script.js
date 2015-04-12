@@ -32,7 +32,7 @@ $(function () {
 function Cregistros(elemento){
     $.ajax({
         dataType: "json",
-        //url:'getData.json',
+
         url: 'http://senaegresados.tk/AutomaticApiRest/getData.php?t=Egresados',
 }).done(function () {
     var items = [];
